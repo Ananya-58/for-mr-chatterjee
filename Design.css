@@ -1,0 +1,136 @@
+/* General Page Setup */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffe5ec; /* You can also use your linear-gradient here! */
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    text-align: center;
+    z-index: 10;
+}
+
+.top-gif {
+    width: 120px;
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 11;
+}
+
+/* The Main Container for Mr. Chatterjee */
+.main-card {
+    background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.3);
+    width: 350px;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Image Styling - Added Object-Fit to prevent stretching */
+.img-container img {
+    height: 200px; /* Adjusted to be a bit taller and more balanced */
+    width: 250px;
+    object-fit: cover; 
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 4px solid white;
+}
+
+h2 {
+    color: #c9184a;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+/* Button Positioning and Logic */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    margin-top: 20px;
+    min-height: 80px;
+    position: relative;
+}
+
+button {
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, all 0.2s ease;
+}
+
+#yesBtn {
+    background: #ff4d6d;
+    color: white;
+    font-size: 1.1rem;
+    z-index: 1000;
+}
+
+#noBtn {
+    background: #808080;
+    color: white;
+    z-index: 999;
+}
+
+/* The Secret Trap - 7th Attempt */
+.full-screen-takeover {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border-radius: 0 !important;
+    
+    /* Using clamp so the text stays readable on all devices */
+    font-size: 2.5rem!important; 
+    
+    z-index: 9999 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff4d6d !important;
+    color: white !important;
+    font-family: 'Dancing Script', cursive; /* Optional: adds the romantic font to the big button */
+}
+
+/* Background Animations */
+.bg-heart {
+    position: absolute;
+    color: rgba(255, 77, 109, 0.2);
+    font-size: 50px;
+    animation: float 6s infinite linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% { transform: translateY(110vh) scale(1); }
+    100% { transform: translateY(-20vh) scale(1.5); }
+}
+
+/* Success State Text */
+.hidden { display: none; }
+
+.glow-text {
+    font-family: 'Dancing Script', cursive;
+    color: #8a021b;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffccd5, 0 0 5px #fff; }
+    to { text-shadow: 0 0 20px #ff4d6d, 0 0 10px #ffccd5; }
+}
